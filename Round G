@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+    int main() {
+      int T;
+      T = getchar();
+      getchar();    // "/n"
+      for (int i = 1; i <= T; ++i) {
+          int N = getchar(); //number of pages
+          getchar(); //space
+          int M = getchar(); //number of lost pages
+          getchar(); //space
+          int Q = getchar(); //number of readers
+          getchar(); // "/n"
+          
+          printf("%d %d %d", N, M, Q);
+        printf("Case #%d: %d",i,i);
+      }
+      return 0;
+    }
