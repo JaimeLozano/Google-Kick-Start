@@ -1,0 +1,24 @@
+#include <iostream>
+#include <vector>
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <string>
+
+
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+  bool inputExit = false;
+  string s;
+  vector<string> stringVector;
+  while(inputExit == false) {
+    getline(cin, s);
+    stringVector.push_back(s);
+    if(s.size() == 0) {
+      inputExit = true;
+    }
+    s.clear();
+  }
+}
