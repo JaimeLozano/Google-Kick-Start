@@ -173,7 +173,7 @@ int main(int argc, char const *argv[]) {
 			resultsVector.push_back(result);
 		}
 
-		resultOutPut(resultsVector);
+		resultOutPut(resultsVector); // OUTPUT
 		
 	} else {
 		perror("ERROR: Incorrect arguments input");
