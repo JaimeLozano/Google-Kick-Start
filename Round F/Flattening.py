@@ -1,3 +1,5 @@
+#Incorrect with big numbers
+
 # Wall 
 # 	- N sections --> 1 to N --> left to right
 # 	- Not all sections are of the same weight --> the i-th is Ai metres tall
