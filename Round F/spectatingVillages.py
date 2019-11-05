@@ -15,7 +15,7 @@
 # 	- Third List of integer Vi with beauty
 # 	- V-1 lines follows Xi and Yi
 
-def maxBeautyComprober(beautyList, binaryList, V, Road):
+def maxBeautyComprober(beautyList, binaryList, V, Road): # Save value sum of option
 	maxValue = 0
 	for i in range(0, len(binaryList)):
 		for j in range(0, len(binaryList)):
@@ -43,16 +43,16 @@ for x in range(0,T):
 		Road.append([Xi,Yi])
 	rangeOptions = 2**V
 	for i in range(0, rangeOptions):
-		binaryList = list(bin(i))
-		binaryList.pop(0)
-		binaryList.pop(0)
-		binaryList = list(map(int, binaryList))
-		if len(binaryList) != V:
+		binaryList = list(bin(i)) # = 0b(binNumberFormat)
+		binaryList.pop(0) # Delete first 0
+		binaryList.pop(0) # Delete 'b'
+		binaryList = list(map(int, binaryList)) # Divide number in individual list
+		if len(binaryList) != V: 
 			put0 = V-(len(binaryList))
 			for j in range(0, put0):
-				binaryList.insert(0,0)
-		maxCandidateNumber = maxBeautyComprober(Vb, binaryList , V, Road)
-		if maxCandidateNumber > MAX:
+				binaryList.insert(0,0) # Add villages in 0 value that not in count in list
+		maxCandidateNumber = maxBeautyComprober(Vb, binaryList , V, Road) # Return actual beauty sum
+		if maxCandidateNumber > MAX: # In case it's bigger than  actual value save actual
 			MAX = maxCandidateNumber
 	print("Case #{}: {}".format(x+1, MAX))
 	MAX = 0
