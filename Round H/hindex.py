@@ -34,6 +34,8 @@ for i in range(0,T):
     N = int(input())
     A = list(map(int, input().split()))
     result = indexVar(N, A)
-    print("Case {}: {}".format(i+1, result))
-
-
+    s = ""
+    for j in range(0,len(result)):
+        s += str(result[j])
+        s += " "
+    print("Case #{}: {}".format(i+1, s))
